@@ -1,119 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rollem Technologies, Inc.</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --primary-color: #131C47;
-            --secondary-color: #5EDADC;
-        }
-        .bg-primary { background-color: var(--primary-color); }
-        .bg-secondary { background-color: var(--secondary-color); }
-        .text-primary { color: var(--primary-color); }
-        .text-secondary { color: var(--secondary-color); }
-        .border-secondary { border-color: var(--secondary-color); }
-        .hover\:border-secondary:hover { border-color: var(--secondary-color); }
-        .hover\:text-secondary:hover { color: var(--secondary-color); }
+      :root {
+        --primary-color: #131c47;
+        --secondary-color: #5edadc;
+      }
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      .bg-secondary {
+        background-color: var(--secondary-color);
+      }
+      .text-primary {
+        color: var(--primary-color);
+      }
+      .text-secondary {
+        color: var(--secondary-color);
+      }
+      .border-secondary {
+        border-color: var(--secondary-color);
+      }
+      .hover\:border-secondary:hover {
+        border-color: var(--secondary-color);
+      }
+      .hover\:text-secondary:hover {
+        color: var(--secondary-color);
+      }
     </style>
-</head>
-<body class="font-sans">
+  </head>
+  <body class="font-sans">
     <!-- Navigation -->
     <nav class="bg-primary text-white py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
+      <div class="container mx-auto px-6 flex justify-between items-center">
         <a href="/">
-        <img src="/rollemtech-logo.png" alt="Rollem Technologies, Inc." style="height:50px;" />
+          <img
+            src="/rollemtech-logo.png"
+            alt="Rollem Technologies, Inc."
+            style="height: 50px"
+          />
         </a>
-            <!-- <div class="text-2xl font-bold">DigitalHub</div> -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a>
-                <a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a>
-            </div>
+        <!-- <div class="text-2xl font-bold">DigitalHub</div> -->
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#services"
+            class="hover:text-secondary transition-colors duration-300"
+            >Services</a
+          >
+          <a
+            href="/contact.html"
+            class="hover:text-secondary transition-colors duration-300"
+            >Contact</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="bg-primary text-white py-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-16 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Transform Your Business With Digital Innovation</h1>
-                <p class="text-lg mb-8">Leverage AI, SaaS, and cutting-edge integrations to scale your digital presence</p>
-                <button class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300">
-                    Get Started
-                </button>
-            </div>
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-16 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Transform Your Business With Digital Innovation
+          </h1>
+          <p class="text-lg mb-8">
+            Leverage AI, SaaS, and cutting-edge integrations to scale your
+            digital presence
+          </p>
+          <a
+            href="/contact.html"
+            class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300"
+          >
+            Get Started
+          </a>
         </div>
+      </div>
     </header>
 
     <!-- Services Section -->
     <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 id="services" class="text-3xl md:text-4xl font-bold text-primary text-center mb-16">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-primary mb-4">SaaS Products</h3>
-                    <p class="text-gray-600">Scalable software solutions designed for your business needs.</p>
-                </div>
-                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-primary mb-4">Integrations</h3>
-                    <p class="text-gray-600">Seamless system integration services to streamline your business operations.</p>
-                </div>
-                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-primary mb-4">AI Solutions</h3>
-                    <p class="text-gray-600">Custom AI implementations to automate and optimize your processes.</p>
-                </div>
-                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-primary mb-4">Mobile Apps</h3>
-                    <p class="text-gray-600">Branded mobile apps to drive customer engagement and loyalty.</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <h2
+          id="services"
+          class="text-3xl md:text-4xl font-bold text-primary text-center mb-16"
+        >
+          Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-primary mb-4">SaaS Products</h3>
+            <p class="text-gray-600">
+              Scalable software solutions designed for your business needs.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-primary mb-4">Integration</h3>
+            <p class="text-gray-600">
+              Seamless system integration services to streamline your business
+              operations.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-primary mb-4">AI Solutions</h3>
+            <p class="text-gray-600">
+              Custom AI implementations to automate and optimize your processes.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-primary mb-4">Mobile Apps</h3>
+            <p class="text-gray-600">
+              Branded mobile apps to drive customer engagement and loyalty.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="bg-primary py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 id="contact" class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
-            <p class="text-lg text-gray-300 mb-8">Let's discuss how our solutions can help you achieve your goals.</p>
-            <button class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300">
-                Contact Us Today
-            </button>
-        </div>
+      <div class="container mx-auto px-6 text-center">
+        <h2 id="contact" class="text-3xl md:text-4xl font-bold text-white mb-8">
+          Ready to Transform Your Business?
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Let's discuss how our solutions can help you achieve your goals.
+        </p>
+        <a
+          href="/contact.html"
+          class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300"
+        >
+          Contact Us Today
+        </a>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-100 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-xl font-bold text-primary mb-4">RollemTech</h4>
-                    <p class="text-gray-600">Transforming businesses through digital innovation.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-primary mb-4">Services</h4>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>SaaS Products</li>
-                        <li>System Integrations</li>
-                        <li>AI Solutions</li>
-                        <li>Mobile Apps</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-primary mb-4">Connect</h4>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>LinkedIn</li>
-                        <li>Twitter</li>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
-                <p>&copy; <script>document.write(new Date().getFullYear());</script> Rollem Technologies, Inc. All rights reserved.</p>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-xl font-bold text-primary mb-4">RollemTech</h4>
+            <p class="text-gray-600">
+              Transforming businesses through digital innovation.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-primary mb-4">Services</h4>
+            <ul class="text-gray-600 space-y-2">
+              <li>SaaS Products</li>
+              <li>System Integrations</li>
+              <li>AI Solutions</li>
+              <li>Mobile Apps</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-primary mb-4">Connect</h4>
+            <ul class="text-gray-600 space-y-2 underline">
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/rollem-technologies-inc"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="https://x.com/rollemtech">Twitter</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/rollemtech"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/rollemtech"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <div
+          class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600"
+        >
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Rollem Technologies, Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
