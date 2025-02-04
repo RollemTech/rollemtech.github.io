@@ -8,6 +8,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --primary-color: #131c47;
@@ -28,51 +32,110 @@
       .hover\:text-secondary:hover {
         color: var(--secondary-color);
       }
+      
+      /* Gradient animation */
+      .animated-gradient {
+        background: linear-gradient(-45deg, var(--primary-color), var(--primary-color), #203060, var(--secondary-color));
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .animated-gradient::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .animated-gradient > * {
+        position: relative;
+        z-index: 2;
+      }
+      
+      @keyframes gradientAnimation {
+        0% { background-position: 0% 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0% 50% }
+      }
+
+      /* Floating animation for service cards */
+      .float-animation {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      /* Glowing effect for CTA buttons */
+      .glow-button {
+        animation: glowing 2s ease-in-out infinite;
+      }
+
+      @keyframes glowing {
+        0% { box-shadow: 0 0 5px var(--secondary-color); }
+        50% { box-shadow: 0 0 20px var(--secondary-color); }
+        100% { box-shadow: 0 0 5px var(--secondary-color); }
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
-  <body class="bg-primary font-sans">
+  <body class="font-sans">
     <!-- Navigation -->
-    <nav class="bg-primary text-white py-4">
+    <nav class="bg-primary text-white py-4 fixed w-full z-50 backdrop-filter backdrop-blur-lg bg-opacity-90">
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="/">
+        <a href="/" class="transform hover:scale-105 transition-transform duration-300">
           <img
             src="/rollemtech-logo.png"
             alt="Rollem Technologies, Inc."
             style="height: 50px"
           />
         </a>
-        <!-- <div class="text-2xl font-bold">DigitalHub</div> -->
         <div class="hidden md:flex space-x-8">
           <a
             href="#services"
-            class="hover:text-secondary transition-colors duration-300"
-            >Services</a
+            class="hover:text-secondary transition-colors duration-300 relative group"
           >
+            Services
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          </a>
           <a
             href="https://forms.rollemtech.com/form/xgrUXVso"
-            class="hover:text-secondary transition-colors duration-300"
-            >Contact</a
+            class="hover:text-secondary transition-colors duration-300 relative group"
           >
+            Contact
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          </a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-primary text-white py-20">
-      <div
-        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
-      >
-        <div class="md:w-1/2 mb-16 md:mb-0">
+    <header class="animated-gradient text-white min-h-screen flex items-center pt-16">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Transform Your Business With Digital Innovation
           </h1>
-          <p class="text-lg mb-8">
+          <p class="text-lg mb-8 opacity-90">
             Leverage AI, SaaS, and cutting-edge integrations to scale your
             digital presence
           </p>
           <a
             href="https://forms.rollemtech.com/form/xgrUXVso"
-            class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300"
+            class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-all duration-300 glow-button inline-block"
           >
             Get Started
           </a>
@@ -86,12 +149,15 @@
         <h2
           id="services"
           class="text-3xl md:text-4xl font-bold text-primary text-center mb-16"
+          data-aos="fade-up"
         >
           Our Services
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div
-            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 float-animation"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             <h3 class="text-xl font-bold text-primary mb-4">SaaS Products</h3>
             <p class="text-gray-600">
@@ -99,7 +165,9 @@
             </p>
           </div>
           <div
-            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 float-animation"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             <h3 class="text-xl font-bold text-primary mb-4">Integration</h3>
             <p class="text-gray-600">
@@ -108,7 +176,9 @@
             </p>
           </div>
           <div
-            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 float-animation"
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             <h3 class="text-xl font-bold text-primary mb-4">AI Solutions</h3>
             <p class="text-gray-600">
@@ -116,7 +186,9 @@
             </p>
           </div>
           <div
-            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+            class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 float-animation"
+            data-aos="fade-up"
+            data-aos-delay="400"
           >
             <h3 class="text-xl font-bold text-primary mb-4">Mobile Apps</h3>
             <p class="text-gray-600">
@@ -128,8 +200,8 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-primary py-20">
-      <div class="container mx-auto px-6 text-center">
+    <section class="animated-gradient py-20">
+      <div class="container mx-auto px-6 text-center" data-aos="fade-up">
         <h2 id="contact" class="text-3xl md:text-4xl font-bold text-white mb-8">
           Ready to Transform Your Business?
         </h2>
@@ -138,7 +210,7 @@
         </p>
         <a
           href="https://forms.rollemtech.com/form/xgrUXVso"
-          class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300"
+          class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-all duration-300 glow-button inline-block"
         >
           Contact Us Today
         </a>
@@ -149,13 +221,13 @@
     <footer class="bg-gray-100 py-12">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
             <h4 class="text-xl font-bold text-primary mb-4">Rollem Tech</h4>
             <p class="text-gray-600">
               Transforming businesses with digital innovation
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <h4 class="text-lg font-bold text-primary mb-4">Services</h4>
             <ul class="text-gray-600 space-y-2">
               <li>SaaS Products</li>
@@ -164,35 +236,43 @@
               <li>Mobile Apps</li>
             </ul>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="300">
             <h4 class="text-lg font-bold text-primary mb-4">Connect</h4>
-            <ul class="text-gray-600 flex space-x-2">
+            <ul class="text-gray-600 flex space-x-4">
               <li>
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/company/rollem-technologies-inc"
-                  ><i data-lucide="linkedin"></i
-                ></a>
+                  class="transform hover:scale-125 transition-transform duration-300 inline-block"
+                ><i data-feather="linkedin"></i></a>
               </li>
               <li>
-                <a target="_blank" href="https://x.com/rollemtech"
-                  ><i data-lucide="x"></i
-                ></a>
+                <a
+                  target="_blank"
+                  href="https://x.com/rollemtech"
+                  class="transform hover:scale-125 transition-transform duration-300 inline-block"
+                ><i data-feather="twitter"></i></a>
               </li>
               <li>
-                <a target="_blank" href="https://www.instagram.com/rollemtech"
-                  ><i data-lucide="instagram"></i
-                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/rollemtech"
+                  class="transform hover:scale-125 transition-transform duration-300 inline-block"
+                ><i data-feather="instagram"></i></a>
               </li>
               <li>
-                <a target="_blank" href="https://www.facebook.com/rollemtech"
-                  ><i data-lucide="facebook"></i
-                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/rollemtech"
+                  class="transform hover:scale-125 transition-transform duration-300 inline-block"
+                ><i data-feather="facebook"></i></a>
               </li>
               <li>
-                <a target="_blank" href="https://github.com/rollemira"
-                  ><i data-lucide="github"></i
-                ></a>
+                <a
+                  target="_blank"
+                  href="https://github.com/rollemira"
+                  class="transform hover:scale-125 transition-transform duration-300 inline-block"
+                ><i data-feather="github"></i></a>
               </li>
             </ul>
           </div>
@@ -212,9 +292,15 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <script>
-      lucide.createIcons();
+      feather.replace();
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: 'ease-out-cubic'
+      });
     </script>
   </body>
 </html>
