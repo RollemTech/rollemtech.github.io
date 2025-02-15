@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rollem Technologies, Inc.</title>
+    <script
+      defer
+      data-domain="rollemtech.com"
+      src="https://plausible.rollemtech.com/js/script.js"
+    ></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
     <style>
@@ -28,6 +37,88 @@
       .hover\:text-secondary:hover {
         color: var(--secondary-color);
       }
+
+      /* Gradient animation */
+      .animated-gradient {
+        background: linear-gradient(
+          -45deg,
+          var(--primary-color),
+          var(--primary-color),
+          #203060,
+          var(--secondary-color)
+        );
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .animated-gradient::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .animated-gradient > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Floating animation for service cards */
+      .float-animation {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* Glowing effect for CTA buttons */
+      .glow-button {
+        animation: glowing 2s ease-in-out infinite;
+      }
+
+      @keyframes glowing {
+        0% {
+          box-shadow: 0 0 5px var(--secondary-color);
+        }
+        50% {
+          box-shadow: 0 0 20px var(--secondary-color);
+        }
+        100% {
+          box-shadow: 0 0 5px var(--secondary-color);
+        }
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body class="bg-primary font-sans">
@@ -41,7 +132,6 @@
             style="height: 50px"
           />
         </a>
-        <!-- <div class="text-2xl font-bold">DigitalHub</div> -->
         <div class="hidden md:flex space-x-8">
           <a
             href="#services"
@@ -90,7 +180,7 @@
         </p>
         <a
           href="/"
-          class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300"
+          class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-all duration-300 glow-button inline-block"
           >Return to Homepage</a
         >
       </div>

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rollem Technologies, Inc.</title>
-    <script defer data-domain="rollemtech.com" src="https://plausible.rollemtech.com/js/script.js"></script>
+    <script
+      defer
+      data-domain="rollemtech.com"
+      src="https://plausible.rollemtech.com/js/script.js"
+    ></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
@@ -33,18 +37,24 @@
       .hover\:text-secondary:hover {
         color: var(--secondary-color);
       }
-      
+
       /* Gradient animation */
       .animated-gradient {
-        background: linear-gradient(-45deg, var(--primary-color), var(--primary-color), #203060, var(--secondary-color));
+        background: linear-gradient(
+          -45deg,
+          var(--primary-color),
+          var(--primary-color),
+          #203060,
+          var(--secondary-color)
+        );
         background-size: 400% 400%;
         animation: gradientAnimation 15s ease infinite;
         position: relative;
         overflow: hidden;
       }
-      
+
       .animated-gradient::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -58,11 +68,17 @@
         position: relative;
         z-index: 2;
       }
-      
+
       @keyframes gradientAnimation {
-        0% { background-position: 0% 50% }
-        50% { background-position: 100% 50% }
-        100% { background-position: 0% 50% }
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
 
       /* Floating animation for service cards */
@@ -71,9 +87,15 @@
       }
 
       @keyframes floating {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0px); }
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
       }
 
       /* Glowing effect for CTA buttons */
@@ -82,9 +104,15 @@
       }
 
       @keyframes glowing {
-        0% { box-shadow: 0 0 5px var(--secondary-color); }
-        50% { box-shadow: 0 0 20px var(--secondary-color); }
-        100% { box-shadow: 0 0 5px var(--secondary-color); }
+        0% {
+          box-shadow: 0 0 5px var(--secondary-color);
+        }
+        50% {
+          box-shadow: 0 0 20px var(--secondary-color);
+        }
+        100% {
+          box-shadow: 0 0 5px var(--secondary-color);
+        }
       }
 
       /* Smooth scroll behavior */
@@ -93,11 +121,16 @@
       }
     </style>
   </head>
-  <body class="font-sans">
+  <body class="bg-primary font-sans">
     <!-- Navigation -->
-    <nav class="bg-primary text-white py-4 fixed w-full z-50 backdrop-filter backdrop-blur-lg bg-opacity-90">
+    <nav
+      class="bg-primary text-white py-4 fixed w-full z-50 backdrop-filter backdrop-blur-lg bg-opacity-90"
+    >
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="/" class="transform hover:scale-105 transition-transform duration-300">
+        <a
+          href="/"
+          class="transform hover:scale-105 transition-transform duration-300"
+        >
           <img
             src="/rollemtech-logo.png"
             alt="Rollem Technologies, Inc."
@@ -110,23 +143,35 @@
             class="hover:text-secondary transition-colors duration-300 relative group"
           >
             Services
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"
+            ></span>
           </a>
           <a
             href="https://forms.rollemtech.com/form/xgrUXVso"
             class="hover:text-secondary transition-colors duration-300 relative group"
           >
             Contact
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"
+            ></span>
           </a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="animated-gradient text-white min-h-screen flex items-center pt-16">
-      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+    <header
+      class="animated-gradient text-white min-h-screen flex items-center pt-16"
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div
+          class="md:w-1/2 mb-16 md:mb-0"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Transform Your Business With Digital Innovation
           </h1>
@@ -245,35 +290,40 @@
                   target="_blank"
                   href="https://www.linkedin.com/company/rollem-technologies-inc"
                   class="transform hover:scale-125 transition-transform duration-300 inline-block"
-                ><i data-feather="linkedin"></i></a>
+                  ><i data-feather="linkedin"></i
+                ></a>
               </li>
               <li>
                 <a
                   target="_blank"
                   href="https://x.com/rollemtech"
                   class="transform hover:scale-125 transition-transform duration-300 inline-block"
-                ><i data-feather="twitter"></i></a>
+                  ><i data-feather="twitter"></i
+                ></a>
               </li>
               <li>
                 <a
                   target="_blank"
                   href="https://www.instagram.com/rollemtech"
                   class="transform hover:scale-125 transition-transform duration-300 inline-block"
-                ><i data-feather="instagram"></i></a>
+                  ><i data-feather="instagram"></i
+                ></a>
               </li>
               <li>
                 <a
                   target="_blank"
                   href="https://www.facebook.com/rollemtech"
                   class="transform hover:scale-125 transition-transform duration-300 inline-block"
-                ><i data-feather="facebook"></i></a>
+                  ><i data-feather="facebook"></i
+                ></a>
               </li>
               <li>
                 <a
                   target="_blank"
                   href="https://github.com/rollemira"
                   class="transform hover:scale-125 transition-transform duration-300 inline-block"
-                ><i data-feather="github"></i></a>
+                  ><i data-feather="github"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -300,7 +350,7 @@
       AOS.init({
         once: true,
         duration: 800,
-        easing: 'ease-out-cubic'
+        easing: "ease-out-cubic",
       });
     </script>
   </body>
