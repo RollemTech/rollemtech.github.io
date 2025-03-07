@@ -1,9 +1,9 @@
 # *
 User-agent: *
-Allow: /
+Disallow: 
 
 # Host
 Host: https://rollemtech.com
 
 # Sitemaps
-# Sitemap: https://rollemtech.com/sitemap.xml
+Sitemap: https://rollemtech.com/sitemap.xml
